@@ -1,8 +1,8 @@
 "use client";
 
+import { updateUser, useSession } from "@/lib/auth-client";
 import {
   Button,
-  Description,
   FieldError,
   Form,
   Input,
@@ -11,11 +11,20 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 
+interface IupdateFromData {
+  name: string
+}
+
 export default function ProfilePage() {
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const {data: session} = useSession()
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    const data = Object.fromEntries(formData.entries()) as unknown as IupdateFromData;
+    await updateUser({
+      name: data.name
+    })
 
     // // Convert FormData to plain object
     // formData.forEach((value, key) => {
@@ -34,8 +43,8 @@ export default function ProfilePage() {
             <div>
               <div></div>
               <div>
-                <h2></h2>
-                <p></p>
+                <h2>{session?.user.name}</h2>
+                <p>{session?.user.email}</p>
               </div>
             </div>
             <div>

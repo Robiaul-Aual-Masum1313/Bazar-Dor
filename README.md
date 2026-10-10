@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Bazar Dor
 
-## Getting Started
+**Track daily prices of essential commodities across Bangladesh.**
 
-First, run the development server:
+BazarTrack BD is a market price tracking application designed to help users explore the prices of everyday essentials, compare price changes over time, and view price ranges across different local markets and divisions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Daily Price Overview** — Browse current prices for essential commodities.
+- **Historical Price Comparison** — Compare today's prices with yesterday, last week, and last month.
+- **Price Change Indicators** — Quickly identify whether a commodity's price is rising, falling, or unchanged.
+- **Market-wise Price Ranges** — View minimum and maximum prices reported for different markets.
+- **Division-based Market Data** — Explore market information from divisions across Bangladesh.
+- **Commodity Categories** — Browse products by category, such as rice and lentils.
+- **Bangla Product Names** — View commodity names in Bangla for a more locally relevant experience.
+- **Responsive Interface** — Use the application on desktop, tablet, and mobile screens.
+- **Type-safe Development** — Use TypeScript to improve code clarity and catch common type errors.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧰 Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** — React framework for building the application.
+- **TypeScript** — Static typing for safer, more maintainable code.
+- **Hero UI** — UI components for building the interface.
+- **daisyUI** — Tailwind CSS component classes for styling.
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js installed
+- npm (or another package manager)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone <your-repository-url>
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Move into the project directory:
+
+   ```bash
+   cd bazartrack-bd
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📊 Price Data
+
+The application data includes commodity names, categories, current and historical prices, percentage changes, and market-level minimum and maximum prices. Replace sample data with verified, up-to-date sources before presenting it as live market information.
+
+
+## 🤝 Contributing
+
+Contributions, suggestions, and bug reports are welcome. Feel free to open an issue or submit a pull request.
+
+
