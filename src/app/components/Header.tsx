@@ -2,6 +2,7 @@ import { ICategoryType } from "@/dataTypes/allDataType"
 import Image from "next/image"
 import Link from "next/link"
 import SignInSignOutBtn from "./SignInSignOutBtn"
+import HeaderCatListing from "./HeaderCatListing"
 
 
 export default async function Header() {
@@ -32,11 +33,7 @@ export default async function Header() {
                 <SignInSignOutBtn />
               </div>
             </div>
-            <div className="flex gap-7 py-5">
-                {
-                  data.map(category => <Link key={category.id} href={`/category/${category.id}`}><p>{category.icon} {category.nameBn}</p></Link>)
-                }
-            </div>
+            <HeaderCatListing catData = {data} />
         </div>
     </div>
   )
