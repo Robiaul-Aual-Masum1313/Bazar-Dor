@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { handleGithubSignIn, handleGoogleSignIn } from "../sign-in/page";
 
 interface fromData{
   name: string,
@@ -126,10 +127,10 @@ export default function SignInPage() {
                 <div className="divider">অথবা</div>
               </div>
               <div className="space-x-2">
-                <button className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
+                <button onClick={handleGoogleSignIn} className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
                   Google দিয়ে চালিয়ে যান
                 </button>
-                <button className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
+                <button onClick={handleGithubSignIn} className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
                   GitHub দিয়ে চালিয়ে যান
                 </button>
               </div>

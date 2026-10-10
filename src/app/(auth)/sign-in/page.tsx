@@ -16,6 +16,17 @@ interface IsInfromData {
   email: string;
   password: string;
 }
+export  const handleGoogleSignIn = async () => {
+    await signIn.social({
+      provider: "google",
+    });
+
+  };
+export const handleGithubSignIn = async () => {
+  await signIn.social({
+    provider: 'github'
+  })
+}
 
 export default function SignInPage() {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -29,18 +40,6 @@ export default function SignInPage() {
       password: data.password,
       callbackURL: "/",
     });
-  };
-  const handleGoogleSignIn = async () => {
-    await signIn.social({
-      provider: "google",
-    });
-
-    // // Convert FormData to plain object
-    // formData.forEach((value, key) => {
-    //   data[key] = value.toString();
-    // });
-
-    // alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
   };
 
   return (
@@ -120,7 +119,7 @@ export default function SignInPage() {
                 >
                   Google দিয়ে চালিয়ে যান
                 </button>
-                <button className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
+                <button onClick={handleGithubSignIn} className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
                   GitHub দিয়ে চালিয়ে যান
                 </button>
               </div>
