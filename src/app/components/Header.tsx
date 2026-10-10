@@ -21,7 +21,10 @@ export default async function Header() {
                   <Image src={'/Logo.png'} alt="Bazar Dor" width={50} height={50} />
                 </div>
                 <div>
+                  <Link href={'/'}>
+                  
                   <h2 className="text-3xl font-bold">বাজার দর</h2>
+                  </Link>
                   <p className="text-[12px] font-medium">{todayDate}</p>
                 </div>
               </div>
