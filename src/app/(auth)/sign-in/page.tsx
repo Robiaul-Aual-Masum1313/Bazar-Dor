@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 interface IsInfromData {
   email: string;
@@ -40,6 +41,12 @@ export default function SignInPage() {
       password: data.password,
       callbackURL: "/",
     });
+    if(resData?.user){
+      toast.success('Loged in Successfully')
+    }else{
+      toast.error('Your Email Or Password was Incorrect')
+    }
+    
   };
 
   return (

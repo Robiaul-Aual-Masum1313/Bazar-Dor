@@ -12,6 +12,7 @@ import {
 } from "@heroui/react";
 import Link from "next/link";
 import { handleGithubSignIn, handleGoogleSignIn } from "../sign-in/page";
+import toast from "react-hot-toast";
 
 interface fromData{
   name: string,
@@ -30,6 +31,11 @@ export default function SignInPage() {
       password: data.password
     })
     console.log(resData, error);
+        if(resData?.user){
+      toast.success('Singed Up in Successfully')
+    }else{
+      toast.error('Please Try Again')
+    }
     
 
     // // Convert FormData to plain object

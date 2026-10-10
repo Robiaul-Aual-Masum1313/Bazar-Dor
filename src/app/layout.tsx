@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import PriceTicker from "./components/PriceTicker";
 import Header from "./components/Header";
+import { Toaster } from "react-hot-toast";
 
 const notoSarif = Noto_Serif_Bengali({
   subsets: ["latin",'bengali'],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <PriceTicker />
         {children}
+        <Toaster />
         <div className="bg-[#F0F5F0] py-10"></div>
         <Footer />
       </body>
