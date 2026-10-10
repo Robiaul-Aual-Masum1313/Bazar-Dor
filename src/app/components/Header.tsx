@@ -11,7 +11,7 @@ export default async function Header() {
     <div className="bg-[#FAFCFA]">
         <div className="container mx-auto">
             <div></div>
-            <div className="flex gap-7">
+            <div className="flex gap-7 py-5">
                 {
                   data.map(category => <Link key={category.id} href={`/category/${category.id}`}><p>{category.icon} {category.nameBn}</p></Link>)
                 }
