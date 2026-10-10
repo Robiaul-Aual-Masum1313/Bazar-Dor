@@ -2,7 +2,7 @@
 
 **Track daily prices of essential commodities across Bangladesh.**
 
-BazarTrack BD is a market price tracking application designed to help users explore the prices of everyday essentials, compare price changes over time, and view price ranges across different local markets and divisions.
+Bazar Dor is a market price tracking application designed to help users explore the prices of everyday essentials, compare price changes over time, and view price ranges across different local markets and divisions.
 
 ## ✨ Features
 

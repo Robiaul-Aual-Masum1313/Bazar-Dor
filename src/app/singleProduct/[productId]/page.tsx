@@ -11,7 +11,7 @@ export interface SingleProductPageProps {
 const SingleProductPage = async ({ params }: SingleProductPageProps) => {
   const { productId } = await params;
   const res = await fetch(
-    `https://api.api-store.workers.dev/api/bazardor/products/${productId}`,
+    `https://openapi.programming-hero.com/api/bazardor/products/${productId}`,
   );
   const data: IProductType = await res.json();
   const lowesrPrice = {...data}.markets.sort((a,b) => a.min - b.min)

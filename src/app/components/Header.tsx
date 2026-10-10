@@ -5,7 +5,7 @@ import SignInSignOutBtn from "./SignInSignOutBtn"
 
 
 export default async function Header() {
-    const res = await fetch('https://api.api-store.workers.dev/api/bazardor/categories')
+    const res = await fetch('https://openapi.programming-hero.com/api/bazardor/categories')
     const data : ICategoryType[] = await res.json()
     const todayDate = new Date().toLocaleDateString('bn-BD',{
       dateStyle: 'full'

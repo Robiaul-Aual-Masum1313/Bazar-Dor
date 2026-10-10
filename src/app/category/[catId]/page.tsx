@@ -10,11 +10,11 @@ interface categoryPageProps {
 export default async function CategoryPage({ params }: categoryPageProps) {
   const { catId } = await params;
   const res = await fetch(
-    `https://api.api-store.workers.dev/api/bazardor/categories/${catId}`,
+    `https://openapi.programming-hero.com/api/bazardor/categories/${catId}`,
   );
   const data: ICategoryType = await res.json();
   const res2 = await fetch(
-    `https://api.api-store.workers.dev/api/bazardor/products?category=${catId}`,
+    `https://openapi.programming-hero.com/api/bazardor/products?category=${catId}`,
   );
   const data2: IProductType[] = await res2.json();
   //   console.log(data2);

@@ -6,7 +6,7 @@ import Link from "next/link"
 
 
 export default async function PriceTicker() {
-      const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products')
+      const res = await fetch('https://openapi.programming-hero.com/api/bazardor/products')
       const data : IProductType[] = await res.json()
   return (
     <div className="py-2 border-t border-b border-[#eee] font-medium text-[14px]">

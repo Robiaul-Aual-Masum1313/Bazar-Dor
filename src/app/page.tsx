@@ -6,7 +6,7 @@ import AllProducts from "./components/home/AllProducts";
 
 
 export default async function Home() {
-  const res = await fetch('https://api.api-store.workers.dev/api/bazardor/products')
+  const res = await fetch('https://openapi.programming-hero.com/api/bazardor/products')
   const data : IProductType[] = await res.json()
   const filteredPriceUpData = data.filter(item => item.change.dir === 'up').sort((a,b) => b.change.pct - a.change.pct).slice(0,6)
   const filteredPriceDownData = data.filter(item => item.change.dir === 'down').sort((a,b) => a.change.pct - b.change.pct).slice(0,6)
