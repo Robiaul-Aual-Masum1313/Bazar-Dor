@@ -14,6 +14,11 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
     `https://api.api-store.workers.dev/api/bazardor/products/${productId}`,
   );
   const data: IProductType = await res.json();
+  const lowesrPrice = {...data}.markets.sort((a,b) => a.min - b.min)
+  const lowestValue = lowesrPrice[0].min
+  const highestPrice = {...data}.markets.sort((a,b) => b.max - a.max)
+  const heightValue = highestPrice[0].max
+  const averagePrice = (lowestValue + heightValue) / 2
   console.log(productId);
 
   return (
@@ -50,14 +55,23 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
         </div>
         <div className="bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
           <div>
-            <h4>দামের সারসংক্ষেপ</h4>
-            <div>
-              <div>
+            <h4 className="text-3xl font-semibold py-2.5">দামের সারসংক্ষেপ</h4>
+            <div className="grid grid-cols-3 gap-8">
+              <div className="bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
                 <p>সর্বনিম্ন দাম</p>
-                <h2>টাকা</h2>
+                <h2><span className="text-3xl text-red-700">{lowestValue}</span> টাকা</h2>
                 <p>সবচেয়ে কম দামের বাজার</p>
               </div>
-              <div></div>
+              <div className="bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
+                <p>সর্বাধিক দাম</p>
+                <h2><span className="text-3xl text-red-700">{heightValue}</span> টাকা</h2>
+                <p>সবচেয়ে বেশি দামের বাজার</p>
+              </div>
+              <div className="bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
+                <p>গড় দাম</p>
+                <h2><span className="text-3xl text-red-700">{averagePrice}</span> টাকা</h2>
+                <p>{unitString(data)}-এর হিসাবে</p>
+              </div>
             </div>
           </div>
           <div>
