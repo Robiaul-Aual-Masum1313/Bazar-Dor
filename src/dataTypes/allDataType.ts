@@ -13,6 +13,7 @@ export interface IProductType {
   lastMonth: number;
   change: IchangeType;
   markets: IMarketType[];
+  error?: string
 }
 
 interface IchangeType {

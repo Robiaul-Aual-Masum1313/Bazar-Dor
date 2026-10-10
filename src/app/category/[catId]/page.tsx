@@ -1,5 +1,6 @@
 import CatProductListing from "@/app/components/category/CatProductListing";
 import { ICategoryType, IProductType } from "@/dataTypes/allDataType";
+import { notFound } from "next/navigation";
 
 interface categoryPageProps {
   params: {
@@ -17,7 +18,11 @@ export default async function CategoryPage({ params }: categoryPageProps) {
     `https://openapi.programming-hero.com/api/bazardor/products?category=${catId}`,
   );
   const data2: IProductType[] = await res2.json();
-  //   console.log(data2);
+  if(data2.length === 0) {
+    notFound()
+  }
+
+    // console.log(data2);
 
 
   return (

@@ -1,6 +1,7 @@
 import { arrowSign, unitString } from "@/app/components/home/ProductCard";
 import { IProductType } from "@/dataTypes/allDataType";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export interface SingleProductPageProps {
   params: {
@@ -14,12 +15,16 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
     `https://openapi.programming-hero.com/api/bazardor/products/${productId}`,
   );
   const data: IProductType = await res.json();
-  const lowesrPrice = {...data}.markets.sort((a,b) => a.min - b.min)
+    console.log(data);
+  if(data.error){
+    notFound()
+  }
+  const lowesrPrice = {...data}.markets?.sort((a,b) => a.min - b.min)
   const lowestValue = lowesrPrice[0].min
-  const highestPrice = {...data}.markets.sort((a,b) => b.max - a.max)
+  const highestPrice = {...data}.markets?.sort((a,b) => b.max - a.max)
   const heightValue = highestPrice[0].max
   const averagePrice = (lowestValue + heightValue) / 2
-  console.log(productId);
+  console.log(data);
 
   return (
     <div className="bg-[#F0F5F0] pt-7 pb-10">
