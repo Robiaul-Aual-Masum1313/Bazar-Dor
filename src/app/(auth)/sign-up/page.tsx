@@ -56,7 +56,7 @@ export default function SignInPage() {
           বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।
         </p>
         <div className="  flex flex-col justify-center items-center pt-7">
-          <div className="w-105 bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
+          <div className="w-90 md:w-105 bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
             <Form
               className="flex  flex-col gap-4  text-left"
               onSubmit={onSubmit}
@@ -133,7 +133,7 @@ export default function SignInPage() {
                 <div className="divider">অথবা</div>
               </div>
               <div className="space-x-2">
-                <button onClick={handleGoogleSignIn} className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">
+                <button onClick={handleGoogleSignIn} className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold mb-2">
                   Google দিয়ে চালিয়ে যান
                 </button>
                 <button onClick={handleGithubSignIn} className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold">

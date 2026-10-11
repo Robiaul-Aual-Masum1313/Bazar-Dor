@@ -35,7 +35,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
           {">"} <span>{data.nameBn}</span>
         </div>
         <div>
-          <div className=" bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl flex justify-between">
+          <div className=" bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl flex justify-between flex-col md:flex-row gap-3">
             <div className="flex gap-1.5 items-center">
               <div className="text-6xl">{data.image}</div>
               <div>
@@ -61,7 +61,7 @@ const SingleProductPage = async ({ params }: SingleProductPageProps) => {
         <div className="bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
           <div>
             <h4 className="text-3xl font-semibold py-2.5">দামের সারসংক্ষেপ</h4>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
                 <p>সর্বনিম্ন দাম</p>
                 <h2><span className="text-3xl text-red-700">{lowestValue}</span> টাকা</h2>

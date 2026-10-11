@@ -29,7 +29,7 @@ const CatProductListing = ({ sameCatProduct }: CatProductListingProps) => {
     return (
         <>
                 <div className=" bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
-          <div className="flex gap-1.5 items-center justify-end">
+          <div className="flex flex-col md:flex-row gap-1.5 items-center justify-end">
             সাজান :
             <select 
             value={sortType}

@@ -57,7 +57,7 @@ export default function SignInPage() {
           বিস্তারিত দাম, বাজার তুলনা ও প্রোফাইল দেখতে অ্যাকাউন্টে ঢুকুন।
         </p>
         <div className="  flex flex-col justify-center items-center pt-7">
-          <div className="w-105 bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
+          <div className=" w-95 md:w-105 bg-[#FAFCFA] px-5 py-7 border border-[#E1E8E1] rounded-2xl">
             <Form
               className="flex  flex-col gap-4  text-left"
               onSubmit={onSubmit}
@@ -122,7 +122,7 @@ export default function SignInPage() {
               <div className="space-x-2">
                 <button
                   onClick={handleGoogleSignIn}
-                  className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold"
+                  className="bg-[#FAFCFA] border border-[#eee] p-2.5 rounded-lg text-[14px] font-bold mb-2"
                 >
                   Google দিয়ে চালিয়ে যান
                 </button>

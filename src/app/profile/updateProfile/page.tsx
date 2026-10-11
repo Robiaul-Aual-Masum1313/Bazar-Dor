@@ -45,7 +45,7 @@ export default function ProfilePage() {
   };
   return (
     <div className="bg-[#F0F5F0]  pt-7 pb-10 h-[70vh]">
-      <div className="w-3xl mx-auto">
+      <div className="lg:w-3xl mx-auto">
         <h2 className="text-[32px] font-bold">আমার প্রোফাইল</h2>
         <p className="text-[14px] font-medium">আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</p>
         <div className="space-y-8">

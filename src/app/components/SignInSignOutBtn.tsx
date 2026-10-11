@@ -24,8 +24,8 @@ export default function SignInSignOutBtn() {
       {session?.user ? (
         <>
           <details className="dropdown">
-            <summary className="btn m-1">{session.user.name}</summary>
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-3 shadow-sm">
+            <summary className="btn m-1 relative">{session.user.name}</summary>
+            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-3 shadow-sm absolute right-0">
               <li>
                 <p className="font-bold text-[12px]">{session.user.name}</p>
                 <p>{session.user.email}</p>
@@ -43,11 +43,11 @@ export default function SignInSignOutBtn() {
       ) : (
         <>
           <Link href={"/sign-in"}>
-            <button className="px-3 py-1.5 ">সাইন ইন</button>{" "}
+            <button className="px-2 md:px-3 py-1 md:py-1.5 ">সাইন ইন</button>{" "}
           </Link>
           <Link href={"/sign-up"}>
             {" "}
-            <button className="font-semibold text-white bg-red-700 px-3 py-1.5 rounded-sm">
+            <button className="font-semibold text-white bg-red-700 px-2 md:px-3 py-1 md:py-1.5 rounded-sm">
               সাইন আপ
             </button>
           </Link>
