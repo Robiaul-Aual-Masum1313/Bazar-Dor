@@ -17,6 +17,7 @@ export default function ProfilePage() {
       });
     };
 
+
   return (
     <div className="bg-[#F0F5F0]  pt-7 pb-10 h-[70vh]">
       <div className="lg:w-3xl mx-auto">

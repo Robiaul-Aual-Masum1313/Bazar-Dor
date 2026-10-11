@@ -28,7 +28,8 @@ export default function SignInPage() {
     const {data: resData ,error} = await signUp.email({
       name: data.name,
       email:data.email,
-      password: data.password
+      password: data.password,
+      callbackURL:  '/'
     })
     console.log(resData, error);
         if(resData?.user){

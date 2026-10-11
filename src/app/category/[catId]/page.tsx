@@ -22,8 +22,6 @@ export default async function CategoryPage({ params }: categoryPageProps) {
     notFound()
   }
 
-    // console.log(data2);
-
 
   return (
     <div className="bg-[#F0F5F0] pt-7 pb-10">

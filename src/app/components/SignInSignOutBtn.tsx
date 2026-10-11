@@ -25,7 +25,7 @@ export default function SignInSignOutBtn() {
         <>
           <details className="dropdown">
             <summary className="btn m-1 relative">{session.user.name}</summary>
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-3 shadow-sm absolute right-0">
+            <ul className="menu dropdown-content bg-base-100 rounded-box z-1  p-3 shadow-sm absolute right-0">
               <li>
                 <p className="font-bold text-[12px]">{session.user.name}</p>
                 <p>{session.user.email}</p>

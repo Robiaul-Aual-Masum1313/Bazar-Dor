@@ -23,7 +23,7 @@ const CatProductListing = ({ sameCatProduct }: CatProductListingProps) => {
            setSortedData(copyData)
         }
       },[sortType])
-      console.log(sortType);
+
       
     
     return (
